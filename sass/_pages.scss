@@ -1,0 +1,44 @@
+/*------------------------------------*\
+	PAGES
+\*------------------------------------*/
+
+
+// INTRO
+
+.intro {
+    padding-top: 188px;
+    position: relative;
+    z-index: 100;
+
+    h1 {
+        margin-top: 2.1em;
+    }
+}
+
+
+
+// ABOUT PROFILE
+
+.profile_pic {
+    float: right;
+    max-width: 200px;
+    transform: rotate3d(20deg);
+    transform: rotate(8deg);
+    margin: 20px 0 20px 20px;
+}
+
+// SERVICES
+
+.services {
+    padding: 0 0 3em 0;
+
+    h1 {
+        padding-top: 1.3em;
+    }
+}
+
+.reading-img {
+    width: 200px;
+    float: left;
+    margin: 0 25px 10px 0;
+}

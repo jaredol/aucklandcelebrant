@@ -1,3 +1,17 @@
 /*------------------------------------*\
 	FOOTER
 \*------------------------------------*/
+
+
+.footer {
+    padding: .1em 0;
+    background-color: $color-header;
+    color: darken(white, 30%);
+    color: white;
+    text-align: center;
+
+    small {
+        font-size: 13px;
+    }
+
+}

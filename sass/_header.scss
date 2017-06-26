@@ -1,8 +1,67 @@
 /*------------------------------------*\
-	HEADER / NAV
+	HEADER
 \*------------------------------------*/
 
 
 .header {
-    background: $color-prim;
+    background-color: $color-prim;
+    text-align: center;
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 180px;
+    //padding-bottom: 25px;
+
+    h1 {
+        color: #fff;
+        text-transform: lowercase;
+        text-align: center;
+        padding: 20px 0 20px 0;
+        margin: 0 auto;
+        background: url(../images/beth-oloughlin-auckland-marriage-celebrant.svg) no-repeat center center;
+        background-size: 23%;
+        text-indent: -9999px;
+    }
+
+    // h1 span {
+    //     text-indent: -9999px;
+    //     font-size: 16px;
+    //     display: block;
+    //     margin: 5px 0 20px 0;
+    //     text-align: right;
+    // }
+}
+
+
+// Dark Strip:
+
+.header-secondary {
+    background-color: $color-header;
+    border-top: 4px solid #fff;
+    padding: 12px 25px;
+
+    .content-restrict {
+        display: flex;
+    }
+
+    h3, .tel {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 0;
+        line-height: 1;
+        font-weight: normal;
+        letter-spacing: 1px;
+    }
+
+    .tel {
+        margin-left: auto;
+        background: url(../images/icon-phone.svg) no-repeat left center;
+        padding-left: 27px;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 }
