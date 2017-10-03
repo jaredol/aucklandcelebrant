@@ -1,33 +1,10 @@
 'use strict';
 
-// var gulp = require('gulp');
-// var sass = require('gulp-sass');
-// var bs = require('browser-sync').create();
-//
-// gulp.task('browser-sync', ['sass'], function() {
-//     bs.init({
-//         server: {
-//             baseDir: "./"
-//         }
-//     });
-// });
-//
-// gulp.task('sass', function () {
-//     return gulp.src('sass/*.scss')
-//         .pipe(sass())
-//         .pipe(gulp.dest('css'))
-//         .pipe(bs.reload({stream: true}));
-// });
-//
-// gulp.task('watch', ['browser-sync'], function () {
-//     gulp.watch("sass/*.scss", ['sass']);
-//     gulp.watch("*.html").on('change', bs.reload);
-// });
-
 
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -44,6 +21,10 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
     return gulp.src("sass/*.scss")
         .pipe(sass())
+        .pipe(autoprefixer({ 
+            browsers: ['last 2 version', 'IE 10', 'IE 11'],
+            cascade: false
+        }))
         .pipe(gulp.dest("css"))
         .pipe(browserSync.stream());
 });

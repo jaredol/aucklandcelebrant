@@ -24,6 +24,8 @@ h1 {
 
 h2 {
     font-size: 30px;
+    color:  black;
+
 }
 
 h3 {
@@ -48,11 +50,25 @@ a {
     }
 }
 
+// Lists 
+
+ul {
+    list-style: none;
+}
+
+li::before {
+  content: "• ";
+  color: $color-prim; /* or whatever color you prefer */
+  font-size: 30px;
+  position: relative;
+  top: 5px;
+}
+
 @media (min-width: 46.25em) {
 
     .drop-cap {
-        font-size: 5.25rem ;
-        line-height: 4.25rem;
+        font-size: 5.68rem ;
+        line-height: 4.75rem;
         float: left;
         display: inline-block;
         height: 4.5rem;
@@ -65,4 +81,10 @@ a {
         vertical-align: text-top;
     }
 
+}
+
+.back-to-top {
+    text-align: center;
+    padding-bottom: 2em;
+    margin-bottom: 0;
 }

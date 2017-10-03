@@ -19,11 +19,13 @@ input[type="telephone"] {
 
 label {
     display: block;
+    color: #888;
 }
 
 textarea {
     border: 1px solid #ddd;
     padding: 15px;
+    width: 100%;
     max-width: 600px;
     min-height: 250px;
 }
@@ -45,7 +47,6 @@ textarea {
     }
 
 
-
     &.focussed:after {
         content: " ";
         position: absolute;
@@ -57,4 +58,30 @@ textarea {
         bottom: 0;
         //transition: width .5s;
     }
+}
+
+// *** BUTTONS *** 
+
+
+.btn {
+    background-color: $color-prim;
+    border: none;
+    color: white;
+    padding: .3em 1.8em;
+    border-radius: 7px;
+    //text-transform: lowercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 1.5;
+    transition: background-color .3s;
+
+    &:hover {
+        background-color: darken($color-prim, 10%);
+        cursor: pointer;
+    }
+
+    // padding: .5rem 1rem;
+    //font-size: 1.25rem;
+    // line-height: 1.5;
+    // border-radius: .3rem;
 }

@@ -16,3 +16,8 @@ $font-body   : 'Raleway', sans-serif;
 
 $content-width-outer: 1200px;
 $content-width-inner: 740px;
+
+// Breakpoints
+$smallmobile:  "(max-width: 400px)";
+$mobile:       "(max-width: 768px)";
+$desktop:      "(min-width: 769px)";

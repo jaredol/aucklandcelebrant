@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------------*	INDEX
 \*------------------------------------*/
 /*------------------------------------*	NORMALIZE
@@ -11,6 +12,7 @@
  *    IE on Windows Phone and in iOS.
  */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
@@ -107,6 +109,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -421,7 +424,8 @@ h1 {
   margin-top: 1.3em; }
 
 h2 {
-  font-size: 30px; }
+  font-size: 30px;
+  color: black; }
 
 h3 {
   font-size: 25px; }
@@ -439,10 +443,21 @@ a {
   a:hover {
     text-decoration: underline; }
 
+ul {
+  list-style: none; }
+
+li::before {
+  content: "• ";
+  color: #D87D78;
+  /* or whatever color you prefer */
+  font-size: 30px;
+  position: relative;
+  top: 5px; }
+
 @media (min-width: 46.25em) {
   .drop-cap {
-    font-size: 5.25rem;
-    line-height: 4.25rem;
+    font-size: 5.68rem;
+    line-height: 4.75rem;
     float: left;
     display: inline-block;
     height: 4.5rem;
@@ -450,6 +465,11 @@ a {
     margin-right: 0.25rem; }
   .drop-cap__inner {
     vertical-align: text-top; } }
+
+.back-to-top {
+  text-align: center;
+  padding-bottom: 2em;
+  margin-bottom: 0; }
 
 /*------------------------------------*	IMAGES
 \*------------------------------------*/
@@ -461,17 +481,26 @@ img {
   border: 1px solid #ccc;
   padding: 10px 10px 10px 10px;
   padding: 8px;
+  -webkit-box-shadow: 0 0 4px -1px #666;
   box-shadow: 0 0 4px -1px #666; }
+
+.hero-bottom {
+  background: url("../images/couple_b&w.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 600px;
+  max-height: 600px; }
 
 /*------------------------------------*	HEADER
 \*------------------------------------*/
 .header {
-  background-color: #D87D78;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, white), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to bottom, white 90%, rgba(255, 255, 255, 0));
   text-align: center;
   position: fixed;
   z-index: 200;
   width: 100%;
-  height: 180px; }
+  height: 230px;
+  padding-bottom: 25px; }
   .header h1 {
     color: #fff;
     text-transform: lowercase;
@@ -481,12 +510,16 @@ img {
     background: url(../images/beth-oloughlin-auckland-marriage-celebrant.png) no-repeat center center;
     background-size: 295px;
     text-indent: -9999px; }
+  .header .header-top {
+    background-color: #D87D78; }
 
 .header-secondary {
   background-color: #1c1c1c;
   border-top: 4px solid #fff;
   padding: 12px 25px; }
   .header-secondary .content-restrict {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; }
   .header-secondary h3, .header-secondary .tel {
     color: #fff;
@@ -495,7 +528,12 @@ img {
     margin: 0;
     line-height: 1;
     font-weight: normal;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px); }
+    @media (max-width: 400px) {
+      .header-secondary h3 span, .header-secondary .tel span {
+        display: none; } }
   .header-secondary .tel {
     margin-left: auto;
     background: url(../images/icon-phone.svg) no-repeat left center;
@@ -507,8 +545,12 @@ img {
 /*------------------------------------*	NAVIGATION
 \*------------------------------------*/
 .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: white;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 10px 13px 0 0;
   margin-top: 0; }
@@ -519,16 +561,18 @@ img {
       font-family: "Roboto", sans-serif;
       border-right: 1px solid #ddd;
       padding: .7em .9em;
-      font-size: 11px;
+      font-size: 13px;
       font-weight: bold;
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 1px;
       color: inherit;
       border-bottom: 4px solid #D87D78;
+      -webkit-transition: all 0.2s;
       transition: all 0.2s; }
       .nav ul li a:hover {
         color: #D87D78;
+        -webkit-transform: scale(1.06);
         transform: scale(1.06); }
     .nav ul li:nth-child(2) a {
       border-bottom: 4px solid #e3a3a0; }
@@ -536,6 +580,8 @@ img {
       border-bottom: 4px solid #e9b6b3; }
     .nav ul li:last-child a {
       border-right: none; }
+    .nav ul li:before {
+      content: ""; }
 
 /*------------------------------------*	FOOTER
 \*------------------------------------*/
@@ -565,11 +611,13 @@ input[type="telephone"] {
     background: red; }
 
 label {
-  display: block; }
+  display: block;
+  color: #888; }
 
 textarea {
   border: 1px solid #ddd;
   padding: 15px;
+  width: 100%;
   max-width: 600px;
   min-height: 250px; }
 
@@ -585,6 +633,7 @@ textarea {
     max-width: 300px;
     left: 0;
     bottom: 0;
+    -webkit-transition: width .4s ease-out;
     transition: width .4s ease-out; }
   .form_row.focussed:after {
     content: " ";
@@ -595,6 +644,21 @@ textarea {
     max-width: 300px;
     left: 0;
     bottom: 0; }
+
+.btn {
+  background-color: #D87D78;
+  border: none;
+  color: white;
+  padding: .3em 1.8em;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  line-height: 1.5;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s; }
+  .btn:hover {
+    background-color: #cd5750;
+    cursor: pointer; }
 
 /*------------------------------------*	PAGES
 \*------------------------------------*/
@@ -608,19 +672,24 @@ textarea {
 .profile_pic {
   float: right;
   max-width: 200px;
+  -webkit-transform: rotate3d(20deg);
   transform: rotate3d(20deg);
+  -webkit-transform: rotate(8deg);
   transform: rotate(8deg);
   margin: 20px 0 20px 20px; }
 
 .services {
   padding: 0 0 3em 0; }
-  .services h1 {
-    padding-top: 1.3em; }
 
 .reading-img {
   width: 200px;
   float: left;
-  margin: 0 25px 10px 0; }
+  margin: 0 25px 10px 0;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg); }
+
+.contact h1 {
+  padding-top: 1.3em; }
 
 /*------------------------------------*	HELPERS
 \*------------------------------------*/
@@ -631,3 +700,9 @@ textarea {
 .content-inner {
   max-width: 740px;
   margin: 0 auto; }
+
+hr {
+  background: url("../images/section-divider.png") no-repeat center;
+  height: 50px;
+  border: none;
+  margin: 70px 0 40px 0; }

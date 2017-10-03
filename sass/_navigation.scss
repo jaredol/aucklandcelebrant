@@ -21,7 +21,7 @@
                 font-family: $font-heading;
                 border-right: 1px solid #ddd;
                 padding: .7em .9em;
-                font-size: 11px;
+                font-size: 13px;
                 font-weight: bold;
                 text-transform: uppercase;
                 text-decoration: none;
@@ -41,6 +41,10 @@
 
             &:last-child a {
                 border-right: none;
+            }
+
+            &:before {
+                content: "";
             }
         }
     }
