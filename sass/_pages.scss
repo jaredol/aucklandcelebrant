@@ -21,10 +21,14 @@
 
 .profile_pic {
     float: right;
-    max-width: 200px;
+    max-width: 120px;
     transform: rotate3d(20deg);
     transform: rotate(8deg);
     margin: 20px 0 20px 20px;
+
+    @media #{$desktop} {
+        max-width: 200px;
+    }
 }
 
 // SERVICES
@@ -38,10 +42,14 @@
 }
 
 .reading-img {
-    width: 200px;
+    max-width: 110px;
     float: left;
     margin: 0 25px 10px 0;
     transform: rotate(-2deg);
+
+    @media #{$desktop} {
+        max-width: 200px;
+    }
 }
 
 // CONTACT
@@ -49,5 +57,6 @@
 .contact {
     h1 {
         padding-top: 1.3em;
+        margin-top: 0;
     }
 }

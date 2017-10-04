@@ -3,20 +3,23 @@
 \*------------------------------------*/
 
 
-.content-outer {
-    max-width: $content-width-outer;
-    margin: 0 auto;
-}
-
-
-.content-inner {
-    max-width: $content-width-inner;
-    margin: 0 auto;
-}
 
 hr {
     background: url("../images/section-divider.png") no-repeat center;
     height: 50px;
     border: none;
-    margin: 70px 0 40px 0;
+    margin: 40px auto 10px auto;
+    max-width: 85%;
+
+    @media #{$desktop} {
+        margin: 70px 0 40px 0;
+    }
+}
+
+// This is to prevent the <textarea> form disappearing on Android when clicked
+
+.pos-relative {
+    @media #{$mobile} {
+        position: relative!important;
+    }
 }

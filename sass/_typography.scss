@@ -2,12 +2,21 @@
 	TYPOGRAPHY
 \*------------------------------------*/
 
+// variables
+$heading-1: 30px;
+$heading-2: 24px;
+$heading-2: 20px;
+
 
 body {
     font-family: $font-body;
     line-height: 1.5;
     color: #4A4A4A;
-    font-size: 18px;
+    font-size: 16px;
+
+    @media #{$desktop} {
+        font-size: 18px;
+    }
 }
 
 h1, h2, h3, h4, h5, h5 {
@@ -18,7 +27,7 @@ h1, h2, h3, h4, h5, h5 {
 }
 
 h1 {
-    font-size: 37px;
+    font-size: $heading-1;
     margin-top: 1.3em;
 }
 
@@ -37,8 +46,13 @@ p {
 }
 
 .larger {
-    font-size: 148%;
+    font-size: 120%;
     text-align: center;
+
+    @media #{$mobile} {
+        margin: 0.5em 0 1em 0;
+    }
+
 }
 
 a {
@@ -54,6 +68,7 @@ a {
 
 ul {
     list-style: none;
+    padding-left: 1em;
 }
 
 li::before {
@@ -64,7 +79,20 @@ li::before {
   top: 5px;
 }
 
-@media (min-width: 46.25em) {
+
+@media #{$desktop} {
+
+    $heading-1: 37px;
+    $heading-2: 30px;
+    $heading-2: 25px;
+
+    .larger {
+        font-size: 188%;
+    }
+}
+
+
+//@media (min-width: 46.25em) {
 
     .drop-cap {
         font-size: 5.68rem ;
@@ -81,7 +109,7 @@ li::before {
         vertical-align: text-top;
     }
 
-}
+//}
 
 .back-to-top {
     text-align: center;

@@ -402,6 +402,18 @@ section, div, article, h1, h2, h3, p, input, textarea {
 \*------------------------------------*/
 /*------------------------------------*	STRUCTURE
 \*------------------------------------*/
+.content-outer {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.content-inner {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 20px; }
+  @media (min-width: 769px) {
+    .content-inner {
+      padding: 0 0; } }
+
 .colored-bg {
   background: #FBF9FB; }
 
@@ -411,7 +423,10 @@ body {
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
   color: #4A4A4A;
-  font-size: 18px; }
+  font-size: 16px; }
+  @media (min-width: 769px) {
+    body {
+      font-size: 18px; } }
 
 h1, h2, h3, h4, h5, h5 {
   font-family: "Roboto", sans-serif;
@@ -420,7 +435,7 @@ h1, h2, h3, h4, h5, h5 {
   text-align: center; }
 
 h1 {
-  font-size: 37px;
+  font-size: 30px;
   margin-top: 1.3em; }
 
 h2 {
@@ -434,8 +449,11 @@ p {
   margin-bottom: 1.2em; }
 
 .larger {
-  font-size: 148%;
+  font-size: 120%;
   text-align: center; }
+  @media (max-width: 768px) {
+    .larger {
+      margin: 0.5em 0 1em 0; } }
 
 a {
   text-decoration: none;
@@ -444,7 +462,8 @@ a {
     text-decoration: underline; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding-left: 1em; }
 
 li::before {
   content: "• ";
@@ -454,17 +473,21 @@ li::before {
   position: relative;
   top: 5px; }
 
-@media (min-width: 46.25em) {
-  .drop-cap {
-    font-size: 5.68rem;
-    line-height: 4.75rem;
-    float: left;
-    display: inline-block;
-    height: 4.5rem;
-    padding-top: 0.0625rem;
-    margin-right: 0.25rem; }
-  .drop-cap__inner {
-    vertical-align: text-top; } }
+@media (min-width: 769px) {
+  .larger {
+    font-size: 188%; } }
+
+.drop-cap {
+  font-size: 5.68rem;
+  line-height: 4.75rem;
+  float: left;
+  display: inline-block;
+  height: 4.5rem;
+  padding-top: 0.0625rem;
+  margin-right: 0.25rem; }
+
+.drop-cap__inner {
+  vertical-align: text-top; }
 
 .back-to-top {
   text-align: center;
@@ -499,19 +522,25 @@ img {
   position: fixed;
   z-index: 200;
   width: 100%;
-  height: 230px;
+  height: 210px;
   padding-bottom: 25px; }
   .header h1 {
     color: #fff;
     text-transform: lowercase;
     text-align: center;
-    padding: 20px 0 20px 0;
+    padding: 15px 0 15px 0;
     margin: 0 auto;
     background: url(../images/beth-oloughlin-auckland-marriage-celebrant.png) no-repeat center center;
-    background-size: 295px;
+    background-size: 259px;
     text-indent: -9999px; }
   .header .header-top {
     background-color: #D87D78; }
+  @media (min-width: 769px) {
+    .header {
+      height: 230px; }
+      .header h1 {
+        background-size: 295px;
+        padding: 20px 0 20px 0; } }
 
 .header-secondary {
   background-color: #1c1c1c;
@@ -561,7 +590,7 @@ img {
       font-family: "Roboto", sans-serif;
       border-right: 1px solid #ddd;
       padding: .7em .9em;
-      font-size: 13px;
+      font-size: 11.5px;
       font-weight: bold;
       text-transform: uppercase;
       text-decoration: none;
@@ -582,6 +611,10 @@ img {
       border-right: none; }
     .nav ul li:before {
       content: ""; }
+
+@media (min-width: 769px) {
+  .nav ul li a {
+    font-size: 13px; } }
 
 /*------------------------------------*	FOOTER
 \*------------------------------------*/
@@ -671,38 +704,45 @@ textarea {
 
 .profile_pic {
   float: right;
-  max-width: 200px;
+  max-width: 120px;
   -webkit-transform: rotate3d(20deg);
   transform: rotate3d(20deg);
   -webkit-transform: rotate(8deg);
   transform: rotate(8deg);
   margin: 20px 0 20px 20px; }
+  @media (min-width: 769px) {
+    .profile_pic {
+      max-width: 200px; } }
 
 .services {
   padding: 0 0 3em 0; }
 
 .reading-img {
-  width: 200px;
+  max-width: 110px;
   float: left;
   margin: 0 25px 10px 0;
   -webkit-transform: rotate(-2deg);
   transform: rotate(-2deg); }
+  @media (min-width: 769px) {
+    .reading-img {
+      max-width: 200px; } }
 
 .contact h1 {
-  padding-top: 1.3em; }
+  padding-top: 1.3em;
+  margin-top: 0; }
 
 /*------------------------------------*	HELPERS
 \*------------------------------------*/
-.content-outer {
-  max-width: 1200px;
-  margin: 0 auto; }
-
-.content-inner {
-  max-width: 740px;
-  margin: 0 auto; }
-
 hr {
   background: url("../images/section-divider.png") no-repeat center;
   height: 50px;
   border: none;
-  margin: 70px 0 40px 0; }
+  margin: 40px auto 10px auto;
+  max-width: 85%; }
+  @media (min-width: 769px) {
+    hr {
+      margin: 70px 0 40px 0; } }
+
+@media (max-width: 768px) {
+  .pos-relative {
+    position: relative !important; } }

@@ -4,26 +4,22 @@
 
 
 .header {
-    //background-color: white;
-    //background: linear-gradient(to bottom, rgb(112, 198, 33) 100%,rgba(255,255,255,0.5) 90%,rgba(255,255,255,0) 0%);
     background-image: linear-gradient(to bottom, rgba(255,255,255, 1) 90%, rgba(255, 255, 255, 0));
     text-align: center;
     position: fixed;
     z-index: 200;
     width: 100%;
-    height: 230px;
+    height: 210px;
     padding-bottom: 25px;
-    //outline: 1px solid;
 
     h1 {
         color: #fff;
         text-transform: lowercase;
         text-align: center;
-        padding: 20px 0 20px 0;
+        padding: 15px 0 15px 0;
         margin: 0 auto;
-        //background: url(../images/beth-oloughlin-auckland-marriage-celebrant.svg) no-repeat center center;
         background: url(../images/beth-oloughlin-auckland-marriage-celebrant.png) no-repeat center center;
-        background-size: 295px;
+        background-size: 259px;
         text-indent: -9999px;
     }
 
@@ -37,6 +33,17 @@
 
     .header-top {
         background-color: $color-prim;
+    }
+
+    // Desktop
+    @media #{$desktop} {
+
+        height: 230px;
+
+        h1 {
+            background-size: 295px;
+            padding: 20px 0 20px 0;
+        }
     }
 }
 

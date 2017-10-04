@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beth O'Loughlin Marriage Celebrant</title>
+    
+    <title>Beth O'Loughlin | Auckland Marriage Celebrant</title>
+
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto:700" rel="stylesheet">
     <link rel="stylesheet" href="css/default.css">
 </head>
@@ -29,7 +30,7 @@
             <nav class="nav">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#whatnext">What Next?</a></li>
+                    <li><a href="#whatnext">Getting Started</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </nav>
@@ -42,7 +43,7 @@
             <p class="larger">My name is <strong>Beth O’Loughlin</strong> and I would love to be involved with your special day be it a marriage or civil union.</p>
             <img class="profile_pic bordered" src="images/auckland-marriage-celebrant.jpg" alt="Beth O'Loughlin - Auckland Marriage Celebrant">
             <p><span class="drop-cap"><span class="drop-cap__inner">I</span></span> look forward to hearing your story and then assisting in crafting a special service especially for you.  I have an event management background which can assist in ensuring your day goes smoothly.  If required, I can help you with any aspect of your planning.</p>
-            <p>I am based in <strong>Parnell, Auckland</strong> and am available for services in Auckland City and environs.</p>
+            <p>I am based in <strong>Parnell, Auckland</strong> and am available as your celebrant for services in Auckland City and environs.</p>
             <p>Please email me and I will respond with availability and cost.  I would love to meet with you and have some fun planning your special day!</p>
 
             <hr>
@@ -71,7 +72,7 @@
 
         <section class="services">
             <div class="content-inner">
-                <h1 id="whatnext">What Next?</h1>
+                <h1 id="whatnext">Get Started</h1>
 
                 <!-- <h2>Getting Started</h2> -->
                 <ul>
@@ -107,23 +108,28 @@
 
                 <p>If you would like to make a booking or need further information, feel free to phone me on <a href="tel:+64272612695">027 261 2695</a> or, if you prefer email please use the form below.</p>
 
-                <form action="" id="contact-form">
+                <!-- <form action="" id="contact-form"> -->
+                <form action="https://www.enformed.io/di2izfvc" method="POST" id="contact-form">
                     <div class="form_row">
-                        <label for="">Name</label>
-                        <input type="text" required>
+                        <label for="Name">Name<span class="required">*</span></label>
+                        <input type="text" id="Name" name="Name" required>
                     </div>
                     <div class="form_row">
-                        <label for="">Email</label>
-                        <input type="email" required>
+                        <label for="Email">Email<span class="required">*</span></label>
+                        <input type="email" id="Email" name="Email" required>
                     </div>
                     <div class="form_row">
-                        <label for="">Telephone</label>
-                        <input type="telephone">
+                        <label for="Telephone">Telephone</label>
+                        <input type="telephone" id="Telephone" name="Telephone">
                     </div>
                     <div class="form_row">
-                        <label for="">Message</label>
-                        <textarea name="name" required placeholder="Tell me a bit about yourselves, and what you are planning for your big day..."></textarea>
+                        <label for="Message">Message<span class="required">*</span></label>
+                        <textarea id="Message" name="Message" required placeholder="Tell me a bit about yourselves, and what you are planning for your big day..."></textarea>
                     </div>
+                    <!-- Special fields -->
+                    <input type="hidden" name="*honeypot" />
+                    <input type="hidden" name="*subject" value="Marriage Celebrant enquiry" />
+
                     <div class="form_row">
                         <button class="btn" type="submit">Send</button>
                     </div>
@@ -135,68 +141,16 @@
             </div>
         </section>
 
-        <!-- <img src="images/couple_b&w.jpg" alt="Wedding Bride and Groom"> -->
         <div class="hero-bottom"></div>
 
         <footer class="footer">
             <p><small> &copy; Beth O'Loughlin Marriage Celebrant 2017</small></p>
         </footer>
 
-        <!-- <img src="images/couple_b&w.jpg" alt="Wedding Bride and Groom"> -->
-
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script>
-
-// Smooth Scorlling
-
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-      &&
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top - 230
-        }, 800, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
-
-  // Input Focus border
-
-  $("input").on("focus", function(){
-        console.log('gg');
-        $(".form_row").removeClass("focussed");
-        $(this).parent().toggleClass("focussed");
-  });
-
-</script>
+<script src="js/scripts.js"></script>
 
 </body>
 
