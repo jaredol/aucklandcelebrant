@@ -62,23 +62,25 @@ $("textarea").on("blur", function () {
 
 // AJAX form sending
 
-$(document).ready(function () {
-    $("#contact-form").submit(function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "https://www.enformed.io/di2izfvc",
-            method: "post",
-            dataType: "json",
-            accepts: "application/json",
-            data: $("#contact-form").serialize(),
-            success: function () {
-                console.log("Your form was successfully received!");
-                // Show a success message here...
-            },
-            error: function () {
-                console.log("Failure. Try again.");
-                // Show an error message here...
-            }
-        });
-    });
-});
+// $(document).ready(function () {
+//     $("#contact-form").submit(function (event) {
+//         event.preventDefault();
+//         $.ajax({
+//             url: "https://www.enformed.io/di2izfvc",
+//             method: "post",
+//             dataType: "json",
+//             accepts: "application/json",
+//             data: $("#contact-form").serialize(),
+//             success: function () {
+//                 console.log("Your form was successfully received!");
+//                 // Show a success message here...
+//             },
+//             error: function () {
+//                 console.log("Failure. Try again.");
+//                 $("#Name").val("");
+//                 $("#msg-success").show();
+//                 // Show an error message here...
+//             }
+//         });
+//     });
+// });

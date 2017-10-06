@@ -533,6 +533,8 @@ img {
     background: url(../images/beth-oloughlin-auckland-marriage-celebrant.png) no-repeat center center;
     background-size: 259px;
     text-indent: -9999px; }
+    .header h1 a {
+      display: block; }
   .header .header-top {
     background-color: #D87D78; }
   @media (min-width: 769px) {
@@ -634,7 +636,8 @@ input[type="email"],
 input[type="telephone"] {
   width: 300px;
   padding: .3em;
-  border: 1px solid #ddd; }
+  border: 1px solid #ddd;
+  font-size: 15px; }
   input[type="text"]:after,
   input[type="email"]:after,
   input[type="telephone"]:after {
@@ -652,7 +655,8 @@ textarea {
   padding: 15px;
   width: 100%;
   max-width: 600px;
-  min-height: 250px; }
+  min-height: 250px;
+  font-size: 15px; }
 
 .form_row {
   margin-bottom: 1em;
@@ -677,6 +681,11 @@ textarea {
     max-width: 300px;
     left: 0;
     bottom: 0; }
+
+#msg-success {
+  display: none;
+  outline: 1px solid #D87D78;
+  padding: .6em; }
 
 .btn {
   background-color: #D87D78;
@@ -731,6 +740,10 @@ textarea {
   padding-top: 1.3em;
   margin-top: 0; }
 
+.thank-you-content {
+  padding-top: 173px;
+  margin-bottom: 88px; }
+
 /*------------------------------------*	HELPERS
 \*------------------------------------*/
 hr {
@@ -746,3 +759,6 @@ hr {
 @media (max-width: 768px) {
   .pos-relative {
     position: relative !important; } }
+
+.block-center {
+  text-align: center; }

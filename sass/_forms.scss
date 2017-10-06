@@ -9,6 +9,7 @@ input[type="telephone"] {
     width: 300px;
     padding: .3em;
     border: 1px solid #ddd;
+    font-size: 15px;
     &:after {
         content: " ";
         position: absolute;
@@ -28,6 +29,7 @@ textarea {
     width: 100%;
     max-width: 600px;
     min-height: 250px;
+    font-size: 15px;
 }
 
 .form_row {
@@ -59,6 +61,14 @@ textarea {
         //transition: width .5s;
     }
 }
+
+#msg-success {
+    display: none;
+    outline:1px solid $color-prim;
+    padding: .6em;
+}
+
+
 
 // *** BUTTONS *** 
 
