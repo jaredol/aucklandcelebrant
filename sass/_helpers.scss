@@ -16,6 +16,10 @@ hr {
     }
 }
 
+.removePaddingBot {
+    padding-bottom: 0!important;
+}
+
 // This is to prevent the <textarea> form disappearing on Android when clicked
 
 .pos-relative {

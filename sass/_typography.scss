@@ -45,14 +45,18 @@ p {
     margin-bottom: 1.2em;
 }
 
-.larger {
+.font-largest {
     font-size: 120%;
     text-align: center;
 
     @media #{$mobile} {
         margin: 0.5em 0 1em 0;
     }
+}
 
+.font-larger {
+    text-align: center;
+    font-size: 120%;
 }
 
 a {
@@ -86,8 +90,11 @@ li::before {
     $heading-2: 30px;
     $heading-2: 25px;
 
-    .larger {
+    .font-largest {
         font-size: 188%;
+    }
+    .font-larger {
+        font-size: 145%;
     }
 }
 

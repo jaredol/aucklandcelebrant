@@ -448,12 +448,16 @@ h3 {
 p {
   margin-bottom: 1.2em; }
 
-.larger {
+.font-largest {
   font-size: 120%;
   text-align: center; }
   @media (max-width: 768px) {
-    .larger {
+    .font-largest {
       margin: 0.5em 0 1em 0; } }
+
+.font-larger {
+  text-align: center;
+  font-size: 120%; }
 
 a {
   text-decoration: none;
@@ -474,8 +478,10 @@ li::before {
   top: 5px; }
 
 @media (min-width: 769px) {
-  .larger {
-    font-size: 188%; } }
+  .font-largest {
+    font-size: 188%; }
+  .font-larger {
+    font-size: 145%; } }
 
 .drop-cap {
   font-size: 5.68rem;
@@ -522,7 +528,7 @@ img {
   position: fixed;
   z-index: 200;
   width: 100%;
-  height: 210px;
+  height: 190px;
   padding-bottom: 25px; }
   .header h1 {
     color: #fff;
@@ -755,6 +761,9 @@ hr {
   @media (min-width: 769px) {
     hr {
       margin: 70px 0 40px 0; } }
+
+.removePaddingBot {
+  padding-bottom: 0 !important; }
 
 @media (max-width: 768px) {
   .pos-relative {

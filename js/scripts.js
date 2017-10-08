@@ -39,18 +39,28 @@ $('a[href*="#"]')
         }
     });
 
+$("#nav-contact").on("click", function() {
+    $(".services").addClass("removePaddingBot");
+    console.log("added");
+});
+
+$("#nav-about, #nav-gs").on("click", function () {
+    $(".services").removeClass("removePaddingBot");
+    console.log("removed");
+});
+
 
 
 // Input Focus border
 
-$("input").on("focus", function () {
+$("input").on("focus", function() {
     $(".form_row").removeClass("focussed");
     $(this).parent().toggleClass("focussed");
 });
 
 
 // Textarea remove position:fixed on header
-$("textarea").on("focus", function () {
+$("textarea").on("focus", function() {
     console.log("added");
     $(".header").addClass("pos-relative");
 });
