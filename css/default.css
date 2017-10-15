@@ -639,14 +639,14 @@ img {
 \*------------------------------------*/
 input[type="text"],
 input[type="email"],
-input[type="telephone"] {
+input[type="tel"] {
   width: 300px;
   padding: .3em;
   border: 1px solid #ddd;
   font-size: 15px; }
   input[type="text"]:after,
   input[type="email"]:after,
-  input[type="telephone"]:after {
+  input[type="tel"]:after {
     content: " ";
     position: absolute;
     height: 3px;
