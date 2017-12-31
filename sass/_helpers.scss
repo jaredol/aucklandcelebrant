@@ -12,7 +12,7 @@ hr {
     max-width: 85%;
 
     @media #{$desktop} {
-        margin: 70px 0 40px 0;
+        margin: 70px auto 40px auto;
     }
 }
 
