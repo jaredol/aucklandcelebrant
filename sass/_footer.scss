@@ -4,6 +4,7 @@
 
 
 .footer {
+
     padding: .1em 0;
     background-color: $color-header;
     color: darken(white, 30%);
@@ -12,6 +13,39 @@
 
     small {
         font-size: 13px;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fb-link {
+        display: inline-block;
+        margin: 0;
+        line-height: normal;
+        margin-left: 8px;
+    }
+
+    @media #{$smallmobile} {
+
+        p {
+            flex-direction: column;
+        }
+        
+        .mob {
+            display: block;
+        }
+
+        .footer-divider {
+            display: none;
+        }
+
+         .fb-link {
+             margin-top: 8px;
+         }
+
     }
 
 }
