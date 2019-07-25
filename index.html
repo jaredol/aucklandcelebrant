@@ -138,7 +138,7 @@
                 <p>If you would like to make a booking or need further information, feel free to phone me on <a href="tel:+64272612695">027
                         261 2695</a> or, if you prefer email please use the form below.</p>
 
-                <form action="https://www.enformed.io/di2izfvc" method="POST" id="contact-form">
+                <form  data-netlify="true" action="https://www.celebrantauckland.co.nz/thank-you.html" method="POST" id="contact-form" name="Contact" netlify-honeypot="honey">
                     <div class="form_row">
                         <label for="Name">Name<span class="required">*</span></label>
                         <input type="text" id="Name" name="Name" required>
@@ -156,9 +156,9 @@
                         <textarea id="Message" name="Message" required placeholder="Tell me a bit about yourselves, and what you are planning for your big day..."></textarea>
                     </div>
                     <!-- Special fields -->
-                    <input type="hidden" name="*honeypot" />
-                    <input type="hidden" name="*subject" value="Marriage Celebrant Enquiry" />
-                    <input type="hidden" name="*default_email" value="beth.o@xtra.co.nz" />
+                    <div style="display: none;">
+                    <input name="honey" />
+                    </div>
                     <input type="hidden" name="*redirect" value="https://www.celebrantauckland.co.nz/thank-you.html" />
 
                     <div class="form_row">
